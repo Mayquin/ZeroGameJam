@@ -5,7 +5,12 @@ using UnityEngine.Audio;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    public AudioSource audioSource;
+    
+    public AudioManager audioManager;
+    public AudioSource vfxSource;
+    public AudioSource musicSource;
+    public GameAssets assets;
+
     // Start is called before the first frame update
     void Start()
     {
