@@ -77,11 +77,9 @@ public class Player : MonoBehaviour
                     mInitialVelocity = Vector2.zero;
                     mInitialPosition= Vector2.zero;
                     animator.SetTrigger(assets.animations[ANIMATIONS.FALL]);
-                    GameManager.instance.gameMode = GAMEMODE.END;
+                    StartCoroutine(GameManager.instance.EndGame());
                     break;
             }
-
-            Debug.Log("Is hitting something");
         }
     }
 

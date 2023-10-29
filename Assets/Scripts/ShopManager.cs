@@ -19,7 +19,6 @@ public class ShopManager : MonoBehaviour
 
     private void Start()
     {
-        GameManager.instance.shopManager = this;
         SetupShop();
     }
 

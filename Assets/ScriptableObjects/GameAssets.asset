@@ -14,8 +14,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioAssets:
     _serializedList:
-    - Key: music
+    - Key: 0
       Value: {fileID: 8300000, guid: 7b1b8d7dbe8abac43b7ecc43aab911bd, type: 3}
+    - Key: 1
+      Value: {fileID: 8300000, guid: 0921de0e042857849aa27bac521a438e, type: 3}
+    - Key: 2
+      Value: {fileID: 8300000, guid: f7fff23a893743446ae59b31e2bdfa08, type: 3}
+    - Key: 3
+      Value: {fileID: 8300000, guid: c5dfb3446fb09354a9965f7be595f273, type: 3}
+    - Key: 4
+      Value: {fileID: 8300000, guid: f12b371daaed3d44b940bd1c27d7bd30, type: 3}
+    - Key: 5
+      Value: {fileID: 8300000, guid: 415dcb7216dbc7c4db8623f4c70ddea2, type: 3}
+    - Key: 6
+      Value: {fileID: 8300000, guid: b69ba99fd8aafbd40a8ba676f957aed6, type: 3}
+    - Key: 7
+      Value: {fileID: 8300000, guid: 67499d2ca649c6040a1f700348fb702e, type: 3}
+    - Key: 8
+      Value: {fileID: 8300000, guid: 2d3718ebd7d3f63468a16707adc5da13, type: 3}
+    - Key: 9
+      Value: {fileID: 8300000, guid: 1e522141e21282e4f806a54d3f85a48b, type: 3}
   environments:
   - {fileID: 9190009814322837508, guid: 8eaa58a7e0b6c7541a81519130610daf, type: 3}
   - {fileID: 7542722307585665712, guid: 22e4139165ee402439d6fcc01e140bdc, type: 3}
@@ -28,6 +46,9 @@ MonoBehaviour:
   - {fileID: 632094031748011068, guid: 766c695649c7c604b96bfbbb14b401aa, type: 3}
   skills: {fileID: 11400000, guid: adb9143c3b4f6a24295636d13ec802ac, type: 2}
   pumpkinPrefab:
+  - {fileID: 3280255140743847247, guid: 1ee017dfb7716db408035a30d53677bc, type: 3}
+  - {fileID: 3280255140743847247, guid: 7bd3c57b3fde0054d8db50f96c19dba9, type: 3}
+  - {fileID: 3280255140743847247, guid: 8e078c80d51810148a9e9bebbe70b80a, type: 3}
   - {fileID: 3280255140743847247, guid: 0290569a577ee484585454c995b4f4fc, type: 3}
   animations:
     _serializedList:

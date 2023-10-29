@@ -7,11 +7,10 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     
     public GameAssets assets;
+    
     public AudioManager audioManager;
     public AudioSource vfxSource;
     public AudioSource musicSource;
-    [HideInInspector]
-    public ShopManager shopManager;
     [HideInInspector]
     public GenerateEnvironment environmentManager;
     [HideInInspector]
@@ -20,6 +19,10 @@ public class GameManager : MonoBehaviour
     public Player player;
     [HideInInspector]
     public GAMEMODE gameMode = GAMEMODE.IDLE;
+    [HideInInspector]
+    public UIManager uiManager;
+    [HideInInspector]
+    public MatchRecorder matchRecorder;
 
     void Start()
     {
@@ -36,6 +39,13 @@ public class GameManager : MonoBehaviour
 
     private void InitStuffs()
     {
-        audioManager.PlayMusic(assets.audioAssets["music"]);
+        audioManager.PlayMusic(assets.audioAssets[AUDIOS.MUSIC]);
+    }
+
+    public IEnumerator EndGame()
+    {
+        gameMode = GAMEMODE.END;
+        yield return new WaitForSeconds(1.5f);
+        uiManager.ShowEndGame();
     }
 }

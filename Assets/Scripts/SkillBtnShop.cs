@@ -11,6 +11,6 @@ public class SkillBtnShop : MonoBehaviour
     public void SetupButton(SkillsData skill)
     {
         btnShop.image.sprite = skill.icon;
-        btnShop.onClick.AddListener(() => GameManager.instance.shopManager.SetupBuyInfo(skill));
+        btnShop.onClick.AddListener(() => GameManager.instance.uiManager.shopManager.SetupBuyInfo(skill));
     }
 }

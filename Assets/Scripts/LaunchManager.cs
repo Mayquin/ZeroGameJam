@@ -18,6 +18,7 @@ public class LaunchManager : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && GameManager.instance.gameMode == GAMEMODE.IDLE)
         {
             GameManager.instance.player.Launch(slider.value);
+            GameManager.instance.audioManager.PlayOneShot(GameManager.instance.assets.audioAssets[AUDIOS.CANNON]);
             GameManager.instance.gameMode = GAMEMODE.LAUNCHED;
             gameObject.SetActive(false);
         }

@@ -36,7 +36,7 @@ public class Environment : MonoBehaviour
     public void SetupEnvironment()
     {
         Player player = GameManager.instance.player;
-        for (int i = 0; i < Random.Range(1, 5); i++)
+        for (int i = 0; i < Random.Range(5, 20); i++)
         {
             if (player.skills[(int)SKILLS.GOLDENPUMPKINS] == 0)
             {
@@ -44,7 +44,7 @@ public class Environment : MonoBehaviour
                 
                 if(pumpkin == null )
                 {
-                    Instantiate(GameManager.instance.assets.pumpkinPrefab[0], new Vector3(pumpkinSpawnerTransform.position.x, 0.5f, 0), pumpkinSpawnerTransform.rotation);
+                    Instantiate(GameManager.instance.assets.pumpkinPrefab[Random.Range(0,4)], new Vector3(pumpkinSpawnerTransform.position.x, 0.5f, 0), pumpkinSpawnerTransform.rotation);
                     return;
                 }
 
