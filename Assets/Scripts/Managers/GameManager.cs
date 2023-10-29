@@ -6,26 +6,32 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     
+    public GameAssets assets;
     public AudioManager audioManager;
     public AudioSource vfxSource;
     public AudioSource musicSource;
-    public GameAssets assets;
+    [HideInInspector]
+    public Camera mainCamera;
+    [HideInInspector]
+    public Player player;
+    [HideInInspector]
+    public GAMEMODE gameMode = GAMEMODE.IDLE;
 
-    // Start is called before the first frame update
     void Start()
     {
         if (instance == null)
         {
             instance = this;
+            InitStuffs();
             DontDestroyOnLoad(gameObject);
+            return;
         }
 
         Destroy(gameObject);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void InitStuffs()
     {
-
+        audioManager.PlayMusic(assets.audioAssets["music"]);
     }
 }

@@ -206,7 +206,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 584327308}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: dc03b63f1519dcb4ba5ab73531ebf3b4, type: 2}
+        m_TargetAssemblyTypeName: Utils, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Game
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &584327308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -604,9 +616,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63a3da197f16e44478410a0e0f944736, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioManager: {fileID: 11400000, guid: 77ed7a88ba4d0a045a3a1ee65e9654f4, type: 2}
+  assets: {fileID: 11400000, guid: 01f2d7a02f88ce7408f3a36369e8b2d3, type: 2}
+  audioManager: {fileID: 11400000, guid: ffa4d7f3a89a39a408588d66fb9dff6b, type: 2}
   vfxSource: {fileID: 2098011023}
   musicSource: {fileID: 2105651710}
+  mainCamera: {fileID: 0}
+  player: {fileID: 0}
+  gameMode: 0
 --- !u!4 &1737643516
 Transform:
   m_ObjectHideFlags: 0
@@ -1005,7 +1021,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0

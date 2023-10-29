@@ -7,5 +7,7 @@ using UnityEngine;
 public class GameAssets : ScriptableObject
 {
     [SerializeField]
-    SerializedDictionary<string, AudioClip> audioAssets;
+    public SerializedDictionary<string, AudioClip> audioAssets = new SerializedDictionary<string, AudioClip>();
+    [SerializeField]
+    public List<Environment> environments = new List<Environment>();
 }

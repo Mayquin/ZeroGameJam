@@ -13,4 +13,16 @@ MonoBehaviour:
   m_Name: GameAssets
   m_EditorClassIdentifier: 
   audioAssets:
-    _serializedList: []
+    _serializedList:
+    - Key: music
+      Value: {fileID: 8300000, guid: 7b1b8d7dbe8abac43b7ecc43aab911bd, type: 3}
+  environments:
+  - {fileID: 9190009814322837508, guid: 8eaa58a7e0b6c7541a81519130610daf, type: 3}
+  - {fileID: 7542722307585665712, guid: 22e4139165ee402439d6fcc01e140bdc, type: 3}
+  - {fileID: 4203130338271159082, guid: 56fb2ea655a39af4fa34b84fd43c0857, type: 3}
+  - {fileID: 3205883619383484547, guid: 81bcacc1f8fad454299d73832d1f51d8, type: 3}
+  - {fileID: 5008095555340310375, guid: 102f9e1ba497fb94694e19ff4944f10c, type: 3}
+  - {fileID: 156605431263032979, guid: 8c333258906702e4292a7f22ec54f240, type: 3}
+  - {fileID: 2255795938448554034, guid: d7026a51cfcf7d045b4a387a51f87196, type: 3}
+  - {fileID: 5447275287533287790, guid: 87d8e86be3776b2468ecee6676e7d5a0, type: 3}
+  - {fileID: 632094031748011068, guid: 766c695649c7c604b96bfbbb14b401aa, type: 3}
