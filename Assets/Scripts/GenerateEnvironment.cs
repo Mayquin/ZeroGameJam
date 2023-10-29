@@ -9,9 +9,12 @@ public class GenerateEnvironment : MonoBehaviour
     private Environment lastEnvironment = null;
     public Transform startPoint;
     private float safeDistanceEnvironment = 1.2f;
+    [HideInInspector]
+    public List<AssetBehavior> pumpkinsPool = new List<AssetBehavior>();
     
     void Start()
     {
+        GameManager.instance.environmentManager = this;
         SpawnEnvironment();
     }
 
@@ -86,6 +89,19 @@ public class GenerateEnvironment : MonoBehaviour
         }
 
         Debug.LogError("Don't have environment free to use");
+        return null;
+    }
+
+    public AssetBehavior GetFirstFreePumpkin()
+    {
+        foreach (var pumpkin in pumpkinsPool)
+        {
+            if (pumpkin.isFree)
+            {
+                return pumpkin;
+            }
+        }
+
         return null;
     }
 }

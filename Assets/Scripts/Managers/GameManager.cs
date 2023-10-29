@@ -11,6 +11,10 @@ public class GameManager : MonoBehaviour
     public AudioSource vfxSource;
     public AudioSource musicSource;
     [HideInInspector]
+    public ShopManager shopManager;
+    [HideInInspector]
+    public GenerateEnvironment environmentManager;
+    [HideInInspector]
     public Camera mainCamera;
     [HideInInspector]
     public Player player;

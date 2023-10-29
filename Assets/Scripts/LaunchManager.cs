@@ -19,6 +19,7 @@ public class LaunchManager : MonoBehaviour
         {
             GameManager.instance.player.Launch(slider.value);
             GameManager.instance.gameMode = GAMEMODE.LAUNCHED;
+            gameObject.SetActive(false);
         }
         UpdateBar();
     }

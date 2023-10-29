@@ -10,4 +10,10 @@ public class GameAssets : ScriptableObject
     public SerializedDictionary<string, AudioClip> audioAssets = new SerializedDictionary<string, AudioClip>();
     [SerializeField]
     public List<Environment> environments = new List<Environment>();
+    [SerializeField]
+    public Skills skills;
+    [SerializeField]
+    public List<GameObject> pumpkinPrefab = new List<GameObject>();
+    [SerializeField]
+    public SerializedDictionary<ANIMATIONS, string> animations = new SerializedDictionary<ANIMATIONS, string>();
 }

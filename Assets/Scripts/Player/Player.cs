@@ -15,6 +15,10 @@ public class Player : MonoBehaviour
     public float collisionRadius;
     public LayerMask collisionLayers;
     public bool hitOtherColider;
+    [HideInInspector]
+    public int [] skills = new int[(int)SKILLS.COUNT];
+    public Animator animator;
+    private GameAssets assets;
 
     private float CalculateNewPosition(float acceleration, float velocity, float position, float time)
     {
@@ -25,10 +29,13 @@ public class Player : MonoBehaviour
     {
         mInitialVelocity = new Vector2(Mathf.Cos(mAngle * Mathf.PI / 180), Mathf.Sin(mAngle * Mathf.PI / 180)) * power * powerFactor;
         mInitialPosition = new Vector2(mTransform.position.x, mTransform.position.y);
+        animator.SetTrigger(assets.animations[ANIMATIONS.CANNON]);
+        
     }
     void Start()
     {
-        mTransform = GetComponent<Transform>();
+        assets = GameManager.instance.assets;
+        mTransform = transform;
         GameManager.instance.player = this;
     }
 
@@ -54,18 +61,23 @@ public class Player : MonoBehaviour
             switch(collider.gameObject.layer)
             {
                 case ((int)LAYERS.GOODPUMPKIN):
-                    mInitialVelocity = new Vector2(Mathf.Cos(mAngle * Mathf.PI / 180), Mathf.Sin(mAngle * Mathf.PI / 180)) * powerFactor;
+                    animator.SetTrigger(assets.animations[ANIMATIONS.JUMPDOWN]);
+                    mInitialVelocity = new Vector2(Mathf.Cos(mAngle * Mathf.PI / 180), Mathf.Sin(mAngle * Mathf.PI / 180)) * mInitialVelocity/2;
                     mInitialPosition = new Vector2(mTransform.position.x, mTransform.position.y);
                     mTime = 0;
                     collider.gameObject.SetActive(false);
                     break;
                 case ((int)LAYERS.BADPUMPKIN):
-                    mInitialVelocity = new Vector2(Mathf.Cos(mAngle * Mathf.PI / 180), Mathf.Sin(mAngle * Mathf.PI / 180)) * mInitialVelocity/2;
+                    animator.SetTrigger(assets.animations[ANIMATIONS.JUMPDOWN]);
+                    mInitialVelocity = new Vector2(Mathf.Cos(mAngle * Mathf.PI / 180), Mathf.Sin(mAngle * Mathf.PI / 180)) * mInitialVelocity/3;
+                    mInitialPosition = new Vector2(mTransform.position.x, mTransform.position.y);
                     mTime = 0;
                     break;
                 case ((int)LAYERS.GROUND):
                     mInitialVelocity = Vector2.zero;
                     mInitialPosition= Vector2.zero;
+                    animator.SetTrigger(assets.animations[ANIMATIONS.FALL]);
+                    GameManager.instance.gameMode = GAMEMODE.END;
                     break;
             }
 

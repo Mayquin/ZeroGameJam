@@ -6,7 +6,9 @@ using UnityEngine;
 public enum GAMEMODE
 {
     IDLE,
-    LAUNCHED
+    LAUNCHED,
+    SHOP,
+    END
 }
 
 public enum LAYERS
@@ -14,4 +16,33 @@ public enum LAYERS
     GOODPUMPKIN = 6,
     BADPUMPKIN,
     GROUND
+}
+
+public enum SKILLS
+{
+    GOLDENPUMPKINS,
+    SPRINGPUMPKINS,
+    BOOST,
+    CROWS,
+    COUNT
+}
+
+public enum BEHAVIORS
+{
+    MOVE
+}
+
+public enum INTERACTIONTYPE
+{
+    PUMPKIN,
+    GOLDENPUMPKIN,
+    CROW
+}
+
+public enum ANIMATIONS
+{
+    CANNON,
+    FALL,
+    DASHDOWN,
+    JUMPDOWN
 }

@@ -26,3 +26,16 @@ MonoBehaviour:
   - {fileID: 2255795938448554034, guid: d7026a51cfcf7d045b4a387a51f87196, type: 3}
   - {fileID: 5447275287533287790, guid: 87d8e86be3776b2468ecee6676e7d5a0, type: 3}
   - {fileID: 632094031748011068, guid: 766c695649c7c604b96bfbbb14b401aa, type: 3}
+  skills: {fileID: 11400000, guid: adb9143c3b4f6a24295636d13ec802ac, type: 2}
+  pumpkinPrefab:
+  - {fileID: 3280255140743847247, guid: 0290569a577ee484585454c995b4f4fc, type: 3}
+  animations:
+    _serializedList:
+    - Key: 0
+      Value: Launch
+    - Key: 1
+      Value: FallDown
+    - Key: 2
+      Value: DashDown
+    - Key: 3
+      Value: JumpDown
